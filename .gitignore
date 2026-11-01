@@ -18,3 +18,4 @@ kaggle_preprocessing/reference_slides.csv
 *.zip
 output/
 dataset_audits/
+*.pt

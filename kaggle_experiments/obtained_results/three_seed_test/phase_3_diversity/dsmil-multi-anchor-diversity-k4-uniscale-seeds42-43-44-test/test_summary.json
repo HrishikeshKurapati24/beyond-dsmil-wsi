@@ -1,0 +1,24 @@
+{
+  "test_slides": 129,
+  "ensemble": "mean of all seed-by-fold checkpoint probabilities",
+  "n_models": 15,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "threshold_from_oof": 0.38083721200625104,
+  "test_auc": 0.9495884773662552,
+  "test_accuracy": 0.8914728682170543,
+  "test_balanced_accuracy": 0.8881172839506173,
+  "test_sensitivity": 0.875,
+  "test_specificity": 0.9012345679012346,
+  "confusion_matrix": {
+    "tn": 73,
+    "fp": 8,
+    "fn": 6,
+    "tp": 42
+  },
+  "test_114_label": 0,
+  "cv_summary": "/kaggle/working/dsmil-multi-anchor-diversity-k4-uniscale-seeds42-43-44"
+}

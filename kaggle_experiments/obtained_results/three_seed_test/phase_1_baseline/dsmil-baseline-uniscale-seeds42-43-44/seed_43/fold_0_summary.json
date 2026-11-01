@@ -1,0 +1,13 @@
+{
+  "fold": 0,
+  "best_epoch": 7,
+  "validation_auc": 0.9772727272727273,
+  "validation_loss": 0.40528086848832945,
+  "training_loss_at_best_checkpoint": 0.4258989421305833,
+  "training_accuracy_0.5": 0.7777777777777778,
+  "validation_accuracy_0.5": 0.7592592592592593,
+  "validation_balanced_accuracy_0.5": 0.7897727272727273,
+  "validation_sensitivity_0.5": 0.9545454545454546,
+  "validation_specificity_0.5": 0.625,
+  "elapsed_seconds": 56.8
+}

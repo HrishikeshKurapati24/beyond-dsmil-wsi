@@ -1,0 +1,13 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "folds": 5,
+  "anchors": 4,
+  "diversity_weight": 0.1,
+  "manifest_sha256": "12d13547a03ce93dacf2087fe237f16f9a69d1ac2611c6a6b88dadab945ca604",
+  "test_ensemble": "arithmetic mean of all 15 seed-by-fold checkpoint probabilities",
+  "threshold": "Youden J on three-seed averaged OOF probabilities"
+}

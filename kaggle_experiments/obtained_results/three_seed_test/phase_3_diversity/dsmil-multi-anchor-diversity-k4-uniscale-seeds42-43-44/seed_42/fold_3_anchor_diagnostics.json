@@ -1,0 +1,1248 @@
+{
+  "fold": 3,
+  "epoch": 50,
+  "slides": [
+    {
+      "slide_id": "normal_009",
+      "anchor_row_indices": [
+        4528,
+        4728,
+        6922,
+        675
+      ],
+      "anchor_instance_logits": [
+        -0.4417276978492737,
+        -0.4429720640182495,
+        -0.4446010887622833,
+        -0.44646626710891724
+      ],
+      "mean_pairwise_anchor_cosine": 0.998755931854248,
+      "mean_pairwise_attention_cosine": 0.9999878406524658,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "normal_017",
+      "anchor_row_indices": [
+        173,
+        244,
+        555,
+        397
+      ],
+      "anchor_instance_logits": [
+        -0.4160947799682617,
+        -0.4223715364933014,
+        -0.4235953688621521,
+        -0.4315081834793091
+      ],
+      "mean_pairwise_anchor_cosine": 0.9996227025985718,
+      "mean_pairwise_attention_cosine": 1.0000008344650269,
+      "normalized_attention_entropy": [
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552
+      ]
+    },
+    {
+      "slide_id": "normal_018",
+      "anchor_row_indices": [
+        1558,
+        2845,
+        663,
+        3114
+      ],
+      "anchor_instance_logits": [
+        -0.39516681432724,
+        -0.3970813751220703,
+        -0.40387216210365295,
+        -0.40522244572639465
+      ],
+      "mean_pairwise_anchor_cosine": 0.9994356036186218,
+      "mean_pairwise_attention_cosine": 0.9999982714653015,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "normal_019",
+      "anchor_row_indices": [
+        353,
+        144,
+        39,
+        65
+      ],
+      "anchor_instance_logits": [
+        -0.41049835085868835,
+        -0.4110780656337738,
+        -0.4114157557487488,
+        -0.4128221571445465
+      ],
+      "mean_pairwise_anchor_cosine": 0.99950110912323,
+      "mean_pairwise_attention_cosine": 0.9999992847442627,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "normal_026",
+      "anchor_row_indices": [
+        4933,
+        2232,
+        5993,
+        6697
+      ],
+      "anchor_instance_logits": [
+        -0.3713237941265106,
+        -0.3725154399871826,
+        -0.37695950269699097,
+        -0.3776000142097473
+      ],
+      "mean_pairwise_anchor_cosine": 0.9996242523193359,
+      "mean_pairwise_attention_cosine": 0.9999771118164062,
+      "normalized_attention_entropy": [
+        0.9999998211860657,
+        0.9999998211860657,
+        0.9999998211860657,
+        0.9999998211860657
+      ]
+    },
+    {
+      "slide_id": "normal_040",
+      "anchor_row_indices": [
+        7088,
+        3633,
+        15136,
+        14840
+      ],
+      "anchor_instance_logits": [
+        -0.3809168338775635,
+        -0.38201379776000977,
+        -0.38213592767715454,
+        -0.385223925113678
+      ],
+      "mean_pairwise_anchor_cosine": 0.9998485445976257,
+      "mean_pairwise_attention_cosine": 1.000001311302185,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "normal_051",
+      "anchor_row_indices": [
+        3721,
+        2410,
+        3976,
+        1066
+      ],
+      "anchor_instance_logits": [
+        -0.3904024362564087,
+        -0.39153507351875305,
+        -0.3971847891807556,
+        -0.39916878938674927
+      ],
+      "mean_pairwise_anchor_cosine": 0.9995973110198975,
+      "mean_pairwise_attention_cosine": 0.9999944567680359,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "normal_053",
+      "anchor_row_indices": [
+        6390,
+        6906,
+        4079,
+        2638
+      ],
+      "anchor_instance_logits": [
+        -0.3674027621746063,
+        -0.37175464630126953,
+        -0.37234771251678467,
+        -0.3730229139328003
+      ],
+      "mean_pairwise_anchor_cosine": 0.9998044967651367,
+      "mean_pairwise_attention_cosine": 0.9999996423721313,
+      "normalized_attention_entropy": [
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552
+      ]
+    },
+    {
+      "slide_id": "normal_055",
+      "anchor_row_indices": [
+        1619,
+        4368,
+        4804,
+        3436
+      ],
+      "anchor_instance_logits": [
+        -0.37629300355911255,
+        -0.3826509714126587,
+        -0.3842625319957733,
+        -0.3846495747566223
+      ],
+      "mean_pairwise_anchor_cosine": 0.999732494354248,
+      "mean_pairwise_attention_cosine": 0.9999980330467224,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "normal_058",
+      "anchor_row_indices": [
+        6318,
+        6341,
+        2337,
+        6051
+      ],
+      "anchor_instance_logits": [
+        -0.39961379766464233,
+        -0.40227702260017395,
+        -0.4099389314651489,
+        -0.41134729981422424
+      ],
+      "mean_pairwise_anchor_cosine": 0.999468207359314,
+      "mean_pairwise_attention_cosine": 1.0000132322311401,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "normal_064",
+      "anchor_row_indices": [
+        13329,
+        1724,
+        4227,
+        2376
+      ],
+      "anchor_instance_logits": [
+        -0.3706788420677185,
+        -0.3742515444755554,
+        -0.3749176263809204,
+        -0.3779160678386688
+      ],
+      "mean_pairwise_anchor_cosine": 0.9996823668479919,
+      "mean_pairwise_attention_cosine": 1.0000007152557373,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "normal_070",
+      "anchor_row_indices": [
+        16942,
+        19100,
+        2076,
+        17268
+      ],
+      "anchor_instance_logits": [
+        -0.38236203789711,
+        -0.38260921835899353,
+        -0.3846384286880493,
+        -0.389461487531662
+      ],
+      "mean_pairwise_anchor_cosine": 0.9994539022445679,
+      "mean_pairwise_attention_cosine": 0.9999980926513672,
+      "normalized_attention_entropy": [
+        0.9999997019767761,
+        0.9999997019767761,
+        0.9999997019767761,
+        0.9999997019767761
+      ]
+    },
+    {
+      "slide_id": "normal_076",
+      "anchor_row_indices": [
+        13930,
+        431,
+        1289,
+        20276
+      ],
+      "anchor_instance_logits": [
+        -0.3769972324371338,
+        -0.38009703159332275,
+        -0.38371556997299194,
+        -0.38399893045425415
+      ],
+      "mean_pairwise_anchor_cosine": 0.9998230934143066,
+      "mean_pairwise_attention_cosine": 1.0000016689300537,
+      "normalized_attention_entropy": [
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552
+      ]
+    },
+    {
+      "slide_id": "normal_079",
+      "anchor_row_indices": [
+        4726,
+        8951,
+        858,
+        7125
+      ],
+      "anchor_instance_logits": [
+        -0.3790510296821594,
+        -0.3802216649055481,
+        -0.3819310665130615,
+        -0.3836638033390045
+      ],
+      "mean_pairwise_anchor_cosine": 0.9990875720977783,
+      "mean_pairwise_attention_cosine": 1.0,
+      "normalized_attention_entropy": [
+        0.9999997019767761,
+        0.9999997019767761,
+        0.9999997019767761,
+        0.9999997019767761
+      ]
+    },
+    {
+      "slide_id": "normal_083",
+      "anchor_row_indices": [
+        898,
+        2833,
+        2066,
+        1931
+      ],
+      "anchor_instance_logits": [
+        -0.38473689556121826,
+        -0.3929722309112549,
+        -0.3931524157524109,
+        -0.3999313414096832
+      ],
+      "mean_pairwise_anchor_cosine": 0.9997405409812927,
+      "mean_pairwise_attention_cosine": 1.0000004768371582,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "normal_088",
+      "anchor_row_indices": [
+        365,
+        9017,
+        12885,
+        11252
+      ],
+      "anchor_instance_logits": [
+        -0.372186541557312,
+        -0.37320852279663086,
+        -0.3752426505088806,
+        -0.37524962425231934
+      ],
+      "mean_pairwise_anchor_cosine": 0.999732494354248,
+      "mean_pairwise_attention_cosine": 1.0000011920928955,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "normal_092",
+      "anchor_row_indices": [
+        1529,
+        3266,
+        5971,
+        521
+      ],
+      "anchor_instance_logits": [
+        -0.3780859112739563,
+        -0.3789033889770508,
+        -0.3793416917324066,
+        -0.3820779323577881
+      ],
+      "mean_pairwise_anchor_cosine": 0.999734103679657,
+      "mean_pairwise_attention_cosine": 0.9999912977218628,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "normal_094",
+      "anchor_row_indices": [
+        316,
+        4423,
+        5942,
+        7584
+      ],
+      "anchor_instance_logits": [
+        -0.37814411520957947,
+        -0.37888103723526,
+        -0.38005179166793823,
+        -0.3812776505947113
+      ],
+      "mean_pairwise_anchor_cosine": 0.999773383140564,
+      "mean_pairwise_attention_cosine": 1.0000133514404297,
+      "normalized_attention_entropy": [
+        0.9999998807907104,
+        0.9999998807907104,
+        0.9999998807907104,
+        0.9999998807907104
+      ]
+    },
+    {
+      "slide_id": "normal_097",
+      "anchor_row_indices": [
+        14017,
+        13614,
+        6315,
+        6043
+      ],
+      "anchor_instance_logits": [
+        -0.37979987263679504,
+        -0.3826744258403778,
+        -0.38368579745292664,
+        -0.38691475987434387
+      ],
+      "mean_pairwise_anchor_cosine": 0.9994481801986694,
+      "mean_pairwise_attention_cosine": 0.999998927116394,
+      "normalized_attention_entropy": [
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552
+      ]
+    },
+    {
+      "slide_id": "normal_098",
+      "anchor_row_indices": [
+        1552,
+        2242,
+        105,
+        223
+      ],
+      "anchor_instance_logits": [
+        -0.3843759298324585,
+        -0.39056578278541565,
+        -0.39104145765304565,
+        -0.39156490564346313
+      ],
+      "mean_pairwise_anchor_cosine": 0.9997279644012451,
+      "mean_pairwise_attention_cosine": 1.000009298324585,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "normal_101",
+      "anchor_row_indices": [
+        8392,
+        12114,
+        14629,
+        7862
+      ],
+      "anchor_instance_logits": [
+        -0.3831150233745575,
+        -0.3845512270927429,
+        -0.387113094329834,
+        -0.38950395584106445
+      ],
+      "mean_pairwise_anchor_cosine": 0.9995715022087097,
+      "mean_pairwise_attention_cosine": 1.0000011920928955,
+      "normalized_attention_entropy": [
+        1.000000238418579,
+        1.000000238418579,
+        1.000000238418579,
+        1.000000238418579
+      ]
+    },
+    {
+      "slide_id": "normal_102",
+      "anchor_row_indices": [
+        8099,
+        7123,
+        608,
+        6603
+      ],
+      "anchor_instance_logits": [
+        -0.3734079599380493,
+        -0.3771877586841583,
+        -0.377827525138855,
+        -0.3781895935535431
+      ],
+      "mean_pairwise_anchor_cosine": 0.9997620582580566,
+      "mean_pairwise_attention_cosine": 0.9999989867210388,
+      "normalized_attention_entropy": [
+        0.9999998211860657,
+        0.9999998211860657,
+        0.9999998211860657,
+        0.9999998211860657
+      ]
+    },
+    {
+      "slide_id": "normal_112",
+      "anchor_row_indices": [
+        21644,
+        10214,
+        19596,
+        18151
+      ],
+      "anchor_instance_logits": [
+        -0.3699715733528137,
+        -0.37316665053367615,
+        -0.3732081651687622,
+        -0.3786934018135071
+      ],
+      "mean_pairwise_anchor_cosine": 0.9990529417991638,
+      "mean_pairwise_attention_cosine": 0.9999998807907104,
+      "normalized_attention_entropy": [
+        1.0000005960464478,
+        1.0000005960464478,
+        1.0000005960464478,
+        1.0000005960464478
+      ]
+    },
+    {
+      "slide_id": "normal_113",
+      "anchor_row_indices": [
+        15508,
+        15241,
+        915,
+        11686
+      ],
+      "anchor_instance_logits": [
+        -0.3775434195995331,
+        -0.37859874963760376,
+        -0.3791189193725586,
+        -0.38109439611434937
+      ],
+      "mean_pairwise_anchor_cosine": 0.9997800588607788,
+      "mean_pairwise_attention_cosine": 1.0000003576278687,
+      "normalized_attention_entropy": [
+        1.000000238418579,
+        1.000000238418579,
+        1.000000238418579,
+        1.000000238418579
+      ]
+    },
+    {
+      "slide_id": "normal_120",
+      "anchor_row_indices": [
+        1530,
+        8218,
+        14142,
+        8549
+      ],
+      "anchor_instance_logits": [
+        -0.37854623794555664,
+        -0.37964630126953125,
+        -0.3806678056716919,
+        -0.38160985708236694
+      ],
+      "mean_pairwise_anchor_cosine": 0.9998251795768738,
+      "mean_pairwise_attention_cosine": 0.9999992251396179,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "normal_133",
+      "anchor_row_indices": [
+        1963,
+        10342,
+        10268,
+        8724
+      ],
+      "anchor_instance_logits": [
+        -0.3688013553619385,
+        -0.3745594024658203,
+        -0.3770568370819092,
+        -0.37742114067077637
+      ],
+      "mean_pairwise_anchor_cosine": 0.9998218417167664,
+      "mean_pairwise_attention_cosine": 1.0000003576278687,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "normal_148",
+      "anchor_row_indices": [
+        3342,
+        2569,
+        3511,
+        3813
+      ],
+      "anchor_instance_logits": [
+        -0.36958158016204834,
+        -0.3703731298446655,
+        -0.37605422735214233,
+        -0.3783390522003174
+      ],
+      "mean_pairwise_anchor_cosine": 0.9996864795684814,
+      "mean_pairwise_attention_cosine": 0.9999885559082031,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "normal_149",
+      "anchor_row_indices": [
+        8607,
+        18759,
+        15435,
+        5164
+      ],
+      "anchor_instance_logits": [
+        -0.00448094867169857,
+        -0.3814274072647095,
+        -0.3829275965690613,
+        -0.38468635082244873
+      ],
+      "mean_pairwise_anchor_cosine": 0.4991976022720337,
+      "mean_pairwise_attention_cosine": 0.9999994039535522,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "normal_150",
+      "anchor_row_indices": [
+        6302,
+        6104,
+        159,
+        1185
+      ],
+      "anchor_instance_logits": [
+        -0.3848912715911865,
+        -0.3858318030834198,
+        -0.3883069157600403,
+        -0.38902747631073
+      ],
+      "mean_pairwise_anchor_cosine": 0.999778151512146,
+      "mean_pairwise_attention_cosine": 0.999985933303833,
+      "normalized_attention_entropy": [
+        0.9999997615814209,
+        0.9999997615814209,
+        0.9999997615814209,
+        0.9999997615814209
+      ]
+    },
+    {
+      "slide_id": "normal_153",
+      "anchor_row_indices": [
+        2420,
+        9498,
+        8126,
+        7219
+      ],
+      "anchor_instance_logits": [
+        -0.38721537590026855,
+        -0.3877617418766022,
+        -0.3884902000427246,
+        -0.38903844356536865
+      ],
+      "mean_pairwise_anchor_cosine": 0.9997870326042175,
+      "mean_pairwise_attention_cosine": 1.0,
+      "normalized_attention_entropy": [
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552
+      ]
+    },
+    {
+      "slide_id": "normal_157",
+      "anchor_row_indices": [
+        8144,
+        13095,
+        1444,
+        8818
+      ],
+      "anchor_instance_logits": [
+        -0.37161579728126526,
+        -0.3819141685962677,
+        -0.38263851404190063,
+        -0.38312697410583496
+      ],
+      "mean_pairwise_anchor_cosine": 0.9998289942741394,
+      "mean_pairwise_attention_cosine": 0.9999996423721313,
+      "normalized_attention_entropy": [
+        1.0000003576278687,
+        1.0000003576278687,
+        1.0000003576278687,
+        1.0000003576278687
+      ]
+    },
+    {
+      "slide_id": "normal_160",
+      "anchor_row_indices": [
+        9755,
+        19655,
+        5083,
+        3703
+      ],
+      "anchor_instance_logits": [
+        -0.38262510299682617,
+        -0.38501912355422974,
+        -0.3850340247154236,
+        -0.386745810508728
+      ],
+      "mean_pairwise_anchor_cosine": 0.9996230602264404,
+      "mean_pairwise_attention_cosine": 1.000000238418579,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "tumor_010",
+      "anchor_row_indices": [
+        5307,
+        10650,
+        13894,
+        11295
+      ],
+      "anchor_instance_logits": [
+        -0.3703975975513458,
+        -0.37243425846099854,
+        -0.37380313873291016,
+        -0.37565505504608154
+      ],
+      "mean_pairwise_anchor_cosine": 0.9996268153190613,
+      "mean_pairwise_attention_cosine": 1.0000007152557373,
+      "normalized_attention_entropy": [
+        1.0000003576278687,
+        1.0000003576278687,
+        1.0000003576278687,
+        1.0000003576278687
+      ]
+    },
+    {
+      "slide_id": "tumor_020",
+      "anchor_row_indices": [
+        7933,
+        11477,
+        10168,
+        2456
+      ],
+      "anchor_instance_logits": [
+        -0.36644846200942993,
+        -0.3786780834197998,
+        -0.38072308897972107,
+        -0.3813287317752838
+      ],
+      "mean_pairwise_anchor_cosine": 0.9996918439865112,
+      "mean_pairwise_attention_cosine": 1.000000238418579,
+      "normalized_attention_entropy": [
+        1.000000238418579,
+        1.000000238418579,
+        1.000000238418579,
+        1.000000238418579
+      ]
+    },
+    {
+      "slide_id": "tumor_022",
+      "anchor_row_indices": [
+        873,
+        5578,
+        6016,
+        7882
+      ],
+      "anchor_instance_logits": [
+        -0.37663304805755615,
+        -0.37760305404663086,
+        -0.3827167749404907,
+        -0.38339048624038696
+      ],
+      "mean_pairwise_anchor_cosine": 0.9999402761459351,
+      "mean_pairwise_attention_cosine": 0.9999777674674988,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "tumor_029",
+      "anchor_row_indices": [
+        8246,
+        8084,
+        8641,
+        0
+      ],
+      "anchor_instance_logits": [
+        -0.384090781211853,
+        -0.3872295022010803,
+        -0.38761842250823975,
+        -0.3878648281097412
+      ],
+      "mean_pairwise_anchor_cosine": 0.9998113512992859,
+      "mean_pairwise_attention_cosine": 1.0000007152557373,
+      "normalized_attention_entropy": [
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552
+      ]
+    },
+    {
+      "slide_id": "tumor_031",
+      "anchor_row_indices": [
+        2617,
+        2162,
+        596,
+        2133
+      ],
+      "anchor_instance_logits": [
+        -0.39057040214538574,
+        -0.3928024172782898,
+        -0.40222805738449097,
+        -0.4047353267669678
+      ],
+      "mean_pairwise_anchor_cosine": 0.9987329244613647,
+      "mean_pairwise_attention_cosine": 0.9999911785125732,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "tumor_035",
+      "anchor_row_indices": [
+        1080,
+        4189,
+        1728,
+        1881
+      ],
+      "anchor_instance_logits": [
+        -0.37067824602127075,
+        -0.3736523985862732,
+        -0.3775802254676819,
+        -0.37866997718811035
+      ],
+      "mean_pairwise_anchor_cosine": 0.9993667006492615,
+      "mean_pairwise_attention_cosine": 0.999993085861206,
+      "normalized_attention_entropy": [
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552
+      ]
+    },
+    {
+      "slide_id": "tumor_038",
+      "anchor_row_indices": [
+        2121,
+        1399,
+        1937,
+        1401
+      ],
+      "anchor_instance_logits": [
+        -0.3761962652206421,
+        -0.3866742253303528,
+        -0.3958132266998291,
+        -0.39652296900749207
+      ],
+      "mean_pairwise_anchor_cosine": 0.9995568990707397,
+      "mean_pairwise_attention_cosine": 0.9999948740005493,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "tumor_041",
+      "anchor_row_indices": [
+        3362,
+        6860,
+        1382,
+        178
+      ],
+      "anchor_instance_logits": [
+        -0.37676143646240234,
+        -0.3767741322517395,
+        -0.3783499002456665,
+        -0.3805239200592041
+      ],
+      "mean_pairwise_anchor_cosine": 0.9993838667869568,
+      "mean_pairwise_attention_cosine": 0.9999761581420898,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "tumor_048",
+      "anchor_row_indices": [
+        11327,
+        5135,
+        11123,
+        6945
+      ],
+      "anchor_instance_logits": [
+        -0.3790420889854431,
+        -0.3860132694244385,
+        -0.38900887966156006,
+        -0.3910641670227051
+      ],
+      "mean_pairwise_anchor_cosine": 0.9991903305053711,
+      "mean_pairwise_attention_cosine": 0.9999997019767761,
+      "normalized_attention_entropy": [
+        0.9999995827674866,
+        0.9999995827674866,
+        0.9999995827674866,
+        0.9999995827674866
+      ]
+    },
+    {
+      "slide_id": "tumor_053",
+      "anchor_row_indices": [
+        3211,
+        2042,
+        6813,
+        7706
+      ],
+      "anchor_instance_logits": [
+        -0.3782331347465515,
+        -0.3812277317047119,
+        -0.3820885419845581,
+        -0.38515493273735046
+      ],
+      "mean_pairwise_anchor_cosine": 0.9994987845420837,
+      "mean_pairwise_attention_cosine": 0.9999994039535522,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "tumor_060",
+      "anchor_row_indices": [
+        503,
+        5128,
+        5869,
+        5054
+      ],
+      "anchor_instance_logits": [
+        -0.35956984758377075,
+        -0.36547958850860596,
+        -0.3688046932220459,
+        -0.38000088930130005
+      ],
+      "mean_pairwise_anchor_cosine": 0.9996921420097351,
+      "mean_pairwise_attention_cosine": 0.9999839067459106,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "tumor_062",
+      "anchor_row_indices": [
+        10086,
+        8629,
+        4369,
+        8967
+      ],
+      "anchor_instance_logits": [
+        -0.39642149209976196,
+        -0.3971492052078247,
+        -0.40304771065711975,
+        -0.40310466289520264
+      ],
+      "mean_pairwise_anchor_cosine": 0.9969325065612793,
+      "mean_pairwise_attention_cosine": 0.9999992251396179,
+      "normalized_attention_entropy": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896,
+        1.0000001192092896
+      ]
+    },
+    {
+      "slide_id": "tumor_064",
+      "anchor_row_indices": [
+        3868,
+        2277,
+        800,
+        1449
+      ],
+      "anchor_instance_logits": [
+        -0.4006158411502838,
+        -0.40262097120285034,
+        -0.40282538533210754,
+        -0.40312445163726807
+      ],
+      "mean_pairwise_anchor_cosine": 0.9993941187858582,
+      "mean_pairwise_attention_cosine": 1.0000197887420654,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "tumor_070",
+      "anchor_row_indices": [
+        2164,
+        3446,
+        1248,
+        6782
+      ],
+      "anchor_instance_logits": [
+        -0.3863002061843872,
+        -0.3887697458267212,
+        -0.38974636793136597,
+        -0.38989853858947754
+      ],
+      "mean_pairwise_anchor_cosine": 0.9995764493942261,
+      "mean_pairwise_attention_cosine": 1.0000159740447998,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "tumor_072",
+      "anchor_row_indices": [
+        12827,
+        16165,
+        8401,
+        16963
+      ],
+      "anchor_instance_logits": [
+        -0.38396215438842773,
+        -0.38419437408447266,
+        -0.3844949007034302,
+        -0.3869643807411194
+      ],
+      "mean_pairwise_anchor_cosine": 0.9996099472045898,
+      "mean_pairwise_attention_cosine": 1.0000009536743164,
+      "normalized_attention_entropy": [
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552
+      ]
+    },
+    {
+      "slide_id": "tumor_078",
+      "anchor_row_indices": [
+        13493,
+        12042,
+        7283,
+        7856
+      ],
+      "anchor_instance_logits": [
+        -0.3749387264251709,
+        -0.38914060592651367,
+        -0.3904459476470947,
+        -0.3908938765525818
+      ],
+      "mean_pairwise_anchor_cosine": 0.9997048377990723,
+      "mean_pairwise_attention_cosine": 0.9999997019767761,
+      "normalized_attention_entropy": [
+        1.0000003576278687,
+        1.0000003576278687,
+        1.0000003576278687,
+        1.0000003576278687
+      ]
+    },
+    {
+      "slide_id": "tumor_084",
+      "anchor_row_indices": [
+        9122,
+        294,
+        3536,
+        779
+      ],
+      "anchor_instance_logits": [
+        -0.3758689761161804,
+        -0.3793109059333801,
+        -0.38265782594680786,
+        -0.38292473554611206
+      ],
+      "mean_pairwise_anchor_cosine": 0.9997304677963257,
+      "mean_pairwise_attention_cosine": 1.0000003576278687,
+      "normalized_attention_entropy": [
+        1.0000003576278687,
+        1.0000003576278687,
+        1.0000003576278687,
+        1.0000003576278687
+      ]
+    },
+    {
+      "slide_id": "tumor_092",
+      "anchor_row_indices": [
+        4621,
+        38799,
+        33798,
+        18090
+      ],
+      "anchor_instance_logits": [
+        -0.3686029016971588,
+        -0.3696097433567047,
+        -0.3710768222808838,
+        -0.37141212821006775
+      ],
+      "mean_pairwise_anchor_cosine": 0.9997266530990601,
+      "mean_pairwise_attention_cosine": 0.9999974966049194,
+      "normalized_attention_entropy": [
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552
+      ]
+    },
+    {
+      "slide_id": "tumor_093",
+      "anchor_row_indices": [
+        721,
+        7447,
+        6045,
+        5423
+      ],
+      "anchor_instance_logits": [
+        -0.368947297334671,
+        -0.3751564025878906,
+        -0.37910959124565125,
+        -0.3869715929031372
+      ],
+      "mean_pairwise_anchor_cosine": 0.9996672868728638,
+      "mean_pairwise_attention_cosine": 0.9999995231628418,
+      "normalized_attention_entropy": [
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552,
+        0.9999999403953552
+      ]
+    },
+    {
+      "slide_id": "tumor_095",
+      "anchor_row_indices": [
+        1355,
+        10891,
+        954,
+        11890
+      ],
+      "anchor_instance_logits": [
+        -0.378246545791626,
+        -0.3783515393733978,
+        -0.3795384168624878,
+        -0.3802969455718994
+      ],
+      "mean_pairwise_anchor_cosine": 0.9996854662895203,
+      "mean_pairwise_attention_cosine": 0.9999997019767761,
+      "normalized_attention_entropy": [
+        1.0000008344650269,
+        1.0000008344650269,
+        1.0000008344650269,
+        1.0000008344650269
+      ]
+    },
+    {
+      "slide_id": "tumor_103",
+      "anchor_row_indices": [
+        13264,
+        10060,
+        7640,
+        2470
+      ],
+      "anchor_instance_logits": [
+        -0.37376534938812256,
+        -0.3841322064399719,
+        -0.38466230034828186,
+        -0.3854518532752991
+      ],
+      "mean_pairwise_anchor_cosine": 0.9993915557861328,
+      "mean_pairwise_attention_cosine": 1.000000238418579,
+      "normalized_attention_entropy": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "slide_id": "tumor_106",
+      "anchor_row_indices": [
+        11571,
+        1696,
+        10217,
+        13458
+      ],
+      "anchor_instance_logits": [
+        -0.36939799785614014,
+        -0.3704437017440796,
+        -0.37216711044311523,
+        -0.37218719720840454
+      ],
+      "mean_pairwise_anchor_cosine": 0.9995495676994324,
+      "mean_pairwise_attention_cosine": 1.0,
+      "normalized_attention_entropy": [
+        0.9999998211860657,
+        0.9999998211860657,
+        0.9999998211860657,
+        0.9999998211860657
+      ]
+    }
+  ]
+}

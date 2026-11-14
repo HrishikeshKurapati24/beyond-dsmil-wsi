@@ -12,6 +12,15 @@ protocol, results, and limitations. The [consolidated code package](code/README.
 lists designated file authors and project contributions. The original DSMIL
 repository instructions are retained below for its independent workflows.
 
+## Attribution
+
+Cite Li, Li, and Eliceiri (CVPR 2021) for the original DSMIL method and source
+implementation. If you use this project's new models, code, or experimental
+results, also cite the [final project report](docs/final_paper.pdf) and link to
+this repository, identifying the version or commit used. The BibTeX entry in
+the original README section below refers only to the original DSMIL paper; it
+is not a citation for this project's new contributions.
+
 ## Data and protocol
 
 | Feature source | Public Kaggle input |
@@ -379,7 +388,8 @@ root
 
 
 ## Citation
-If you use the code or results in your research, please use the following BibTeX entry.  
+The following entry is for the **original DSMIL paper**. For this project's
+models and results, also follow the attribution guidance above.
 ```
 @inproceedings{li2021dual,
   title={Dual-stream multiple instance learning network for whole slide image classification with self-supervised contrastive learning},

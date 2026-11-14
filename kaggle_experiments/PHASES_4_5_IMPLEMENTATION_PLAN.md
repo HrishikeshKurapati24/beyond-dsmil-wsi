@@ -1,0 +1,53 @@
+# A1 official test and Phase-4 UNI validation
+
+Two existing Kaggle notebooks implement the first sequence. `A1_alpha025_official_test.ipynb` reports the official-test performance of the **archived** uniscale A1 α=0.25 model. `04_a1_uni_spatial_validation.ipynb` runs Phase-4 experiment 1, 2(a), and 2(b) on prepared UNI features. The combined `05_phase4_experiments_3_and_4.ipynb` implements experiments 3 and 4 separately. All Phase-4 runs are **validation-only**; they never open UNI test bags or produce UNI test predictions.
+
+## A1 checkpoint provenance
+
+The builder reads 15 checkpoints from `obtained_results/ab_validation_single_run/ab-validation/A1_alpha_025/seed_{42,43,44}/fold_{0,...,4}.pt`, together with `config.json`, `cv_summary.json`, and `oof_predictions_ensemble.csv`. It embeds only their checksum manifest in the A1 test notebook; embedding the checkpoint ZIP exceeded Kaggle's 1 MB notebook-source limit. On Kaggle, attach the completed A/B validation notebook output containing `ab-validation/A1_alpha_025/`, or upload and attach the generated `a1_alpha025_test_reference.zip` as a dataset. The notebook finds the directory, verifies every archived file, and copies the required files to `/kaggle/working/a1-alpha025-test/a1_reference/`. The 15 bag probabilities are averaged per official-test slide. A Youden J threshold comes from the archived three-seed OOF training scores. No A1 retraining is needed.
+
+## Phase-4 data and fixed training contract
+
+The Phase-4 notebook attaches only the **prepared UNI** dataset. UNI's source supplies a 1024-dimensional embedding tensor per slide and an HDF5 `/coords` array with one coordinate row per embedding row. The source author explicitly states that the row order matches. Its `/coords` attribute `patch_size` records the level-0 pixel width equivalent to a 128-µm patch; the project audit records `patch_level=0`, `level_dim`, and `patch_size_px` for each slide. Preprocessing copies both arrays to matching `bags/<slide>.npy` and `coords/<slide>.npy` without sorting. The Phase-4 notebook embeds coordinate metadata for only the 270 official-training slides.
+
+The runner validates the 399-slide manifest and saved five-fold assignment, but opens `.npy` bags and coordinates only for official-training slides. All variants use folds 0–4, seeds 42/43/44, 50-epoch maximum, patience 10, Adam at 1e-4 (betas 0.5/0.9, weight decay 1e-3), cosine schedule to 5e-6, and the maximum-validation-AUC checkpoint (validation-loss tie break). The input-facing layers are freshly initialized at 1024 dimensions; the archived 512-dimensional A1 weights are not transferred. No feature encoder is trained.
+
+## Common A1 model and experiment 1
+
+For a slide with `N` UNI embeddings `x_i∈R^1024`, instance logits are `c_i=w_cᵀx_i+b_c`. The A1 reference selects the highest scorer first, then up to three more from the **top 32 instance-score rows**. At each step it minimizes `0.75 r_score+0.25 r_feature`, where `r_feature` ranks `1−max_{a∈A}cos(x_i,x_a)` from largest to smallest. For each selected anchor `a_k`, a 128-dimensional feature query gives `s_ik=q(x_i)ᵀq(x_{a_k})/√128`; softmax over all `N` patches gives `a_ik`. The anchor bag is `z_k=Σ_i a_ik x_i`, and the final bag is the equal mean `z_b=(1/K)Σ_k z_k`. A linear classifier produces the bag logit. Training uses `0.5 BCEWithLogits(bag_logit,y)+0.5 BCEWithLogits(max_i c_i,y)` and no attention-overlap penalty. **Experiment 1** runs this model on UNI features without coordinates in either anchor selection or attention.
+
+## Experiments 2(a) and 2(b): relative spatial evidence
+
+Both variants change the **greedy anchor selection** after the first, highest-scoring anchor. The top-32 candidate pool is unchanged. Each remaining candidate receives three ranks: score rank, feature-dissimilarity rank, and spatial-distance rank. Spatial distance is the distance to the **nearest already selected anchor**; farther candidates rank better. Select the smallest `0.50 r_score+0.25 r_feature+0.25 r_spatial`, breaking ties by higher instance score and original row ID. This is a discrete selection rule; it does not receive a gradient. It can only choose far-apart anchors when sufficiently distant candidates exist among the top 32.
+
+For patch coordinates `t_i=(u_i,v_i)` and the slide's source pixel patch width `P`, define distance to anchor `a_k` in **patch widths** as `d_ik=||t_i−t_{a_k}||₂/P`. Fix the nearby scale `ℓ=8` patch widths (about 1.024 mm from the source's 128-µm patches). For each candidate gamma, compute the appearance-plus-relative-distance attention logit:
+
+`e_ik = q(x_i)ᵀq(x_{a_k})/√128 − gamma * min((d_ik/8)^2, 1)`.
+
+The penalty is zero at distance zero, rises quadratically until eight patch widths, and remains capped at gamma beyond that distance. A sufficiently strong appearance match can still outweigh the maximum spatial penalty. The query network, instance logits, selected embedding values `v_i=x_i`, mean fusion, and two-stream objective are unchanged. No absolute-position projection is added.
+
+**Experiment 2(a):** Apply `softmax_i(e_ik)` over **all N patches** for each anchor, then use those weights in `z_k=Σ_i a_ik x_i`.
+
+**Experiment 2(b):** First compute every `e_ik`, including the distance bias. For each anchor column `k`, retain the `C=min(32,N)` **highest combined logits** with deterministic row-ID tie breaks. Set all other logits to `−∞`, softmax over the retained rows, and pool only their embeddings. The top-C decision is based on the biased scores, not appearance scores alone; the attention weights are normalized **after** selection. The selected anchor itself is not forced into the top C, and diagnostics record whether it was retained. This tests whether local, appearance-relevant support makes each anchor's attention less diffuse.
+
+## Gamma tuning, diagnostics, and outputs
+
+Run each of 2(a) and 2(b) with the prespecified gamma grid `{0, 0.25, 0.5, 1.0}` on all five folds × three seeds. Gamma zero isolates the effect of the new anchor selection and, for 2(b), the top-32 pooling rule. Select a gamma for each variant by the highest mean validation AUC across 15 fold/seed fits, then lower mean validation loss and smaller gamma for ties. Save **all** candidate metrics and OOF predictions. This is a validation-stage comparison; no test set is used. With experiment 1, this is `15 + 2×4×15 = 135` new fits.
+
+At every selected checkpoint, record diagnostics for **all 216 training and 54 validation slides** in that fold/seed run, including all six pairwise anchor feature cosine dissimilarities, spatial distances in pixels and patch widths, original row IDs, coordinates, score/rank records, attention support counts, attention-weighted distance, and whether each anchor belongs to its attention support. Each candidate variant therefore has `15×270=4,050` slide/checkpoint diagnostic records; its OOF subset is `54×15=810`. The Phase-4 notebook writes fold histories, 15 checkpoints, 810 OOF rows, a three-seed OOF ensemble, gamma tables, and `test_evaluated=false` for every variant. Compare 2(a) and 2(b) with experiment 1 using paired OOF slides and per-fold/seed validation metrics. A top-32 gain would support the pooling design; anchor spacing and spatial attention should also be checked from the saved diagnostics.
+
+## Experiment 3: latent multi-head spatial anchors
+
+The separate [multi-head spatial-anchor plan](PHASE4_MULTIHEAD_SPATIAL_ANCHORS_IMPLEMENTATION_PLAN.md) replaces A1's single instance scorer and alpha selector with configurable independent heads, a hard eight-patch-width gap between selected anchors, and a differentiable candidate-repulsion penalty. It keeps full-slide attention for each selected head and mean fusion. This is **not** the annotated four-concept A3 study; UNI coordinates alone cannot assign histologic identities to heads. Experiment 3 is in the combined Kaggle notebook; it has not been run yet.
+
+## Experiment 4: spatial hierarchical Top-K DSMIL
+
+The user-supplied hierarchical proposal is adapted in the [detailed experiment-4 implementation plan](PHASE4_HIERARCHICAL_DSMIL_IMPLEMENTATION_PLAN.md). It is **independent of experiment 3's multi-head model**. Start from the existing **flat Top-K DSMIL** rule with one instance scorer, the four highest-scoring anchors, and no A1 alpha or attention-diversity penalty. Train a new matched 1024-dimensional **flat Top-K UNI** reference; the earlier 512-dimensional Phase 2 checkpoints and the UNI A1 experiment-1 checkpoints are not that reference. Keep Kaggle, the same five folds and seeds 42/43/44, and **validation-only** evaluation throughout.
+
+Experiment 4 consists of three cumulative, separately initialized subruns:
+
+1. **4(a), spatial hierarchy:** partition patches into local coordinate-grid microgroups, assign each microgroup to exactly one of the four anchor branches using feature similarity and normalized distance, pool nearby nodes into larger regions, then pool each branch and average its four root vectors. Preserve the original half instance/half final-bag BCE objective. A `w_space=0` control removes only the spatial term from **branch assignment**; the grid hierarchy remains spatial.
+2. **4(b), intermediate MIL:** keep the 4(a) model and add a small level-specific cancer-evidence head at each of its three hierarchy levels. Apply existential/noisy-OR slide-label supervision across branches at each level: `P_ell=1−Π_j(1−p_j^(ell))` and `L_4b=L_4a+lambda_H*(1/3)Σ_ell BCE(P_ell,y)`, initially `lambda_H=0.1`. A positive slide requires at least one positive branch, not four.
+3. **4(c), path consistency:** keep the entire 4(b) architecture and heads. For each real microgroup-to-region-to-branch ancestry path `pi`, form `S_pi=(1/3)Σ_ell log p_(u_ell)^(ell)`. Compute a valid-probability smooth maximum across the `M` paths, `P_path=exp(tau*[logsumexp_pi(S_pi/tau)−log M])`, initially `tau=0.1`; add `L_4c=L_4b+lambda_P*BCE(P_path,y)`, initially `lambda_P=0.1`. Parent IDs enforce that a high path is spatially nested rather than unrelated positive nodes at different levels.
+
+Train a matched flat reference, the feature-only assignment control, and 4(a)/4(b)/4(c): **five variants × five folds × three seeds = 75 new fits**. Each subrun uses the same frozen spatial-grouping contract and independent matched seed initialization; 4(b)/4(c) do not warm-start earlier selected checkpoints. Use stable noisy-OR and path calculations, cache anchor-independent coordinate structures, rebuild anchor-dependent assignments as scores change, profile Kaggle runtime/memory, and save coverage/parent-map diagnostics with OOF predictions. No UNI official-test bags or lesion masks enter training or validation-model selection.

@@ -1,5 +1,7 @@
 # CAMELYON16 Kaggle preprocessing
 
+Public raw feature inputs: [uniscale](https://www.kaggle.com/datasets/hrishikeshkurapati/camelyon16-precomputedfeatures-uniscale), [multiscale](https://www.kaggle.com/datasets/hrishikeshkurapati/camelyon16-precomputedfeatures-multiscale), and [UNI uniscale](https://www.kaggle.com/datasets/hrishikeshkurapati/camelyon16-uni-uniscale-preprocessed-features). These are existing patch embeddings. This pipeline converts them into slide bags and fold manifests; it does not train or run a feature encoder.
+
 Prepare **one** feature source per Kaggle notebook run. The script reads the
 public raw feature dataset under `/kaggle/input` and writes compact NumPy bags,
 one shared five fold assignment, and a slide manifest under `/kaggle/working`.
@@ -12,8 +14,15 @@ It does not alter raw Kaggle inputs or preprocess large files on the laptop.
    three completed local audit reports.
 2. Import `prepare_camelyon16.ipynb` into Kaggle. Attach the bundle dataset
    and **one** raw dataset. Set `SOURCE` in the first code cell to `uniscale`,
-   `multiscale`, or `uni`. The multiscale Kaggle URL is an assumed future
-   location; run it only after its upload is available.
+   `multiscale`, or `uni`. For the current **multiscale** source, also attach
+   a small supplemental Kaggle dataset containing the 17 files
+   `1-tumor/tumor_095.csv` through `1-tumor/tumor_111.csv`, as stored in
+   `datasets/remaining_multiscale_dataset/`. The notebook discovers the
+   missing slide IDs from the shared reference, requires exactly one valid
+   supplemental file for each, and makes a no-copy combined view with file
+   links under `/kaggle/temp`. The original raw dataset does not need to be
+   uploaded again. The overlay code is embedded in the notebook, so the
+   already uploaded preprocessing bundle does not need a new version.
 3. Run all cells. A successful run ends with
    `PREPROCESSING_COMPLETE.json` and 399 files in `bags/`.
 4. Use **Save Version → Save & Run All** and wait for that version to finish

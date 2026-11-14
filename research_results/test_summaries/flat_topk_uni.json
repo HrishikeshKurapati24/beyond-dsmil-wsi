@@ -1,0 +1,36 @@
+{
+  "model": "Phase-4 flat Top-K UNI",
+  "test_slides": 129,
+  "n_models": 15,
+  "test_auc": 0.9871399176954733,
+  "test_accuracy": 0.9689922480620154,
+  "test_balanced_accuracy": 0.9625771604938271,
+  "test_sensitivity": 0.9375,
+  "test_specificity": 0.9876543209876543,
+  "confusion_matrix": {
+    "tn": 80,
+    "fp": 1,
+    "fn": 3,
+    "tp": 45
+  },
+  "threshold_from_oof": 0.34509025250251096,
+  "ensemble_rule": "mean of 15 frozen checkpoint bag probabilities",
+  "prepared_manifest_sha256": "02e6c7372b5ba9f19139b5a1dbaff90cd578faf36233815d0f59df822e86b57d",
+  "checkpoint_sha256": {
+    "seed_42/fold_0/checkpoint.pt": "45393619ba46c552e3572101b7b4193fe866bd29208abf7c00210fdbd3e5336e",
+    "seed_42/fold_1/checkpoint.pt": "bc0b5ffe17c45ef8212c1bd04aba2ebc214dfc0ec68703177d79f038556d85fb",
+    "seed_42/fold_2/checkpoint.pt": "433d6c24ddc95f52781f2a3ac1a75a4c65a3ccad0ea8547667d06d1b47958833",
+    "seed_42/fold_3/checkpoint.pt": "a7065f2e3e9bb267c2d6395ca50f2584cbfb7aec7b1bf18dca051ffec81b34c0",
+    "seed_42/fold_4/checkpoint.pt": "27f1acfd409be56d86f5e7a8b9e0ff1120f4c5ab640931458f5bcb190224c109",
+    "seed_43/fold_0/checkpoint.pt": "36d5160907ad754b2572c826b829b32bbff52a50536e8d05975d79a59013183a",
+    "seed_43/fold_1/checkpoint.pt": "538149475f9cfc1650fffc590a94ad0fd02be584fdd63dfa58490deb5075e1c7",
+    "seed_43/fold_2/checkpoint.pt": "4f9b86a7304240de914d70414fd59fb87df72f29b87430ba3b03534e034cfd72",
+    "seed_43/fold_3/checkpoint.pt": "9dfeddb31a2e24e456c3112378b22683d19e21a6f27ebee5e56fc4a6aa41b82a",
+    "seed_43/fold_4/checkpoint.pt": "9a4b449014ee91ad8530076fcc075d6bba10bf9e7d4c3e482e1d34f9fdadb182",
+    "seed_44/fold_0/checkpoint.pt": "d9f2c18548ab01a0e50f22a028ee744f93ae435a84a7aba13c0ceafd7b0990f8",
+    "seed_44/fold_1/checkpoint.pt": "f8f1fc7c0e0678b4ec0973d54571225ae459af43afe3c06131c838a678544883",
+    "seed_44/fold_2/checkpoint.pt": "97532639f182e043cd5abc1e474d64bea668e578e0312421397adb02596ced38",
+    "seed_44/fold_3/checkpoint.pt": "65527b268a8440ea47d37faefc410b528464aef0a40d6068af113dd6a0a2826f",
+    "seed_44/fold_4/checkpoint.pt": "0fb7eaca2b268b75e6b6b8a93f832c3f3a1de21d83d135ef38fa426a7074ece4"
+  }
+}

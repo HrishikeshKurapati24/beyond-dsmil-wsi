@@ -1,3 +1,64 @@
+# Beyond DSMIL: CAMELYON16 slide classification
+
+This research project reproduces the existing DSMIL implementation and studies new
+anchor selection, spatial attention, feature assignment, and multiscale methods.
+**Experiment 1 is the existing baseline implementation. All subsequent models
+are our implementations.** The work trains only the slide-level multiple
+instance learning model. It uses existing uniscale, multiscale, and UNI patch
+embeddings; it does not train or run a ResNet-18 or UNI feature encoder.
+
+The [final paper](docs/final_paper.pdf) describes the method, experimental
+protocol, results, and limitations. The [consolidated code package](code/README.md)
+lists designated file authors and project contributions. The original DSMIL
+repository instructions are retained below for its independent workflows.
+
+## Data and protocol
+
+| Feature source | Public Kaggle input |
+| --- | --- |
+| Existing uniscale precomputed features | [CAMELYON16 uniscale](https://www.kaggle.com/datasets/hrishikeshkurapati/camelyon16-precomputedfeatures-uniscale) |
+| Existing multiscale precomputed features | [CAMELYON16 multiscale](https://www.kaggle.com/datasets/hrishikeshkurapati/camelyon16-precomputedfeatures-multiscale) |
+| Existing UNI uniscale features and coordinates | [CAMELYON16 UNI](https://www.kaggle.com/datasets/hrishikeshkurapati/camelyon16-uni-uniscale-preprocessed-features) |
+
+Preprocessing runs on Kaggle with [these instructions](kaggle_preprocessing/README.md).
+The canonical split has 270 training slides for fixed five-fold validation and
+129 official test slides. Most experiments use seeds 42, 43, and 44. Official
+test predictions average the probabilities of 15 fold-by-seed checkpoints; the
+decision threshold is selected from training out-of-fold predictions. Under the
+project's explicit label protocol, `test_114` is normal. Later experimental
+ideas were developed after some test results had been viewed, so comparisons
+among those later models are descriptive.
+
+## Experiments and results
+
+The [Kaggle experiment guide](kaggle_experiments/README.md) identifies each
+notebook, input, run status, and output. The [curated result table](research_results/README.md)
+and machine-readable [official test metrics](research_results/official_test_metrics.csv)
+contain the final comparisons; full local Kaggle outputs and checkpoints are
+excluded from new Git commits because of their size.
+
+| Model | Test AUROC | Test accuracy |
+| --- | ---: | ---: |
+| Existing DSMIL baseline, uniscale | 0.9514 | 0.8992 |
+| Our feature-assignment UNI model | 0.9866 | **0.9767** |
+| Our flat Top-K UNI model | **0.9871** | 0.9690 |
+
+Feature assignment has the highest observed accuracy: 126/129 correct, versus
+116/129 for the existing baseline. Flat Top-K UNI has the highest observed
+AUROC. These are single official-test-set comparisons, not independent
+replications.
+
+## Repository map
+
+- `kaggle_preprocessing/`: preparation notebook and scripts for uploaded features.
+- `kaggle_experiments/`: experiment notebooks, runners, plans, and local results.
+- `code/`: annotated main runners and preprocessing scripts, grouped by phase.
+- `research_results/`: small, publishable test summaries with archive provenance.
+- `docs/final_paper.pdf`: final research paper.
+- Root DSMIL scripts below: the original implementation and utility workflows.
+
+## Original DSMIL repository documentation
+
 # DSMIL: Dual-stream multiple instance learning networks for tumor detection in Whole Slide Image
 Pytorch implementation for the multiple instance learning model described in the paper [Dual-stream Multiple Instance Learning Network for Whole Slide Image Classification with Self-supervised Contrastive Learning](https://arxiv.org/abs/2011.08939) (_CVPR 2021, accepted for oral presentation_).  
 

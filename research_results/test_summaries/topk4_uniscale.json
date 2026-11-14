@@ -1,0 +1,24 @@
+{
+  "test_slides": 129,
+  "ensemble": "mean of all seed-by-fold checkpoint probabilities",
+  "n_models": 15,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "threshold_from_oof": 0.45611002047856647,
+  "test_auc": 0.9580761316872428,
+  "test_accuracy": 0.9069767441860465,
+  "test_balanced_accuracy": 0.8877314814814814,
+  "test_sensitivity": 0.8125,
+  "test_specificity": 0.9629629629629629,
+  "confusion_matrix": {
+    "tn": 78,
+    "fp": 3,
+    "fn": 9,
+    "tp": 39
+  },
+  "test_114_label": 0,
+  "cv_summary": "/kaggle/working/dsmil-multi-anchor-k4-uniscale-seeds42-43-44"
+}

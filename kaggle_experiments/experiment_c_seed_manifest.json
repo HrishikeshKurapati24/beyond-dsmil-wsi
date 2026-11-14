@@ -1,0 +1,18 @@
+{
+  "experiment": "pre_phase_4_experiment_c_baseline_seed_sensitivity",
+  "selected_at_utc": "2026-11-10T17:06:42.233011+00:00",
+  "selection_method": "secrets.SystemRandom.sample(range(1, 2**31), 10)",
+  "selection_note": "Ten distinct seeds drawn once before inspecting any Experiment C results; preserve their order and include every run in the analysis.",
+  "seeds": [
+    1168498584,
+    1822252971,
+    1061205832,
+    1155466624,
+    491211737,
+    340262744,
+    558403303,
+    1661531794,
+    1653700425,
+    1439380034
+  ]
+}

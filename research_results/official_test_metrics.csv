@@ -1,0 +1,10 @@
+model,test_slides,n_models,auc,accuracy,balanced_accuracy,sensitivity,specificity,source_archive
+baseline_uniscale,129,15,0.9513888888888888,0.8992248062015504,0.8858024691358024,0.8333333333333334,0.9382716049382716,kaggle_experiments/obtained_results/three_seed_test/phase_1_baseline/dsmil-baseline-uniscale-seeds42-43-44-test/test_summary.json
+topk4_uniscale,129,15,0.9580761316872428,0.9069767441860465,0.8877314814814814,0.8125,0.9629629629629629,kaggle_experiments/obtained_results/three_seed_test/phase_2_four_anchors/dsmil-multi-anchor-k4-uniscale-seeds42-43-44-test/test_summary.json
+topk4_diversity_uniscale,129,15,0.9495884773662552,0.8914728682170543,0.8881172839506173,0.875,0.9012345679012346,kaggle_experiments/obtained_results/three_seed_test/phase_3_diversity/dsmil-multi-anchor-diversity-k4-uniscale-seeds42-43-44-test/test_summary.json
+a1_alpha025_uniscale,129,15,0.9552469135802469,0.875968992248062,0.8503086419753086,0.75,0.9506172839506173,kaggle_experiments/obtained_results/a1_alpha025_official_test/A1_uniscale_test/test_summary.json
+exp2b_gamma100_uni,129,15,0.9717078189300411,0.937984496124031,0.9251543209876543,0.875,0.9753086419753086,kaggle_experiments/obtained_results/phase4-exp2b-gamma100-test/test_summary.json
+flat_topk_uni,129,15,0.9871399176954733,0.9689922480620154,0.9625771604938271,0.9375,0.9876543209876543,kaggle_experiments/obtained_results/phase4-exp4/flat-topk-uni-official-test/test_summary.json
+feature_assignment_uni,129,15,0.9866255144032922,0.9767441860465116,0.9729938271604939,0.9583333333333334,0.9876543209876543,kaggle_experiments/obtained_results/phase4-exp4/feature-assignment-uni-official-test/test_summary.json
+multiscale_fixed,129,15,0.7006172839506172,0.7674418604651163,0.6959876543209876,0.4166666666666667,0.9753086419753086,kaggle_experiments/obtained_results/multiscale-a1/official-test/M-fixed/test_summary.json
+multiscale_adaptive,129,15,0.7685185185185185,0.7984496124031008,0.7418981481481481,0.5208333333333334,0.9629629629629629,kaggle_experiments/obtained_results/multiscale-a1/official-test/M-adaptive/test_summary.json

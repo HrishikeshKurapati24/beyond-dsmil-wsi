@@ -1,0 +1,19 @@
+{
+  "origin": "Phase4 exp2b; UNI; gamma=1.0; archived validation checkpoints",
+  "test_slides": 129,
+  "n_models": 15,
+  "threshold_from_oof": 0.2986865337006748,
+  "test_auc": 0.9717078189300411,
+  "test_accuracy": 0.937984496124031,
+  "test_balanced_accuracy": 0.9251543209876543,
+  "test_sensitivity": 0.875,
+  "test_specificity": 0.9753086419753086,
+  "confusion_matrix": {
+    "tn": 79,
+    "fp": 2,
+    "fn": 6,
+    "tp": 42
+  },
+  "test_114_label": 0,
+  "ensemble_rule": "mean of 15 checkpoint bag probabilities"
+}

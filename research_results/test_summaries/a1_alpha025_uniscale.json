@@ -1,0 +1,19 @@
+{
+  "origin": "A1 alpha=0.25; archived 512-d uniscale",
+  "test_slides": 129,
+  "n_models": 15,
+  "threshold_from_oof": 0.49126486976941425,
+  "test_auc": 0.9552469135802469,
+  "test_accuracy": 0.875968992248062,
+  "test_balanced_accuracy": 0.8503086419753086,
+  "test_sensitivity": 0.75,
+  "test_specificity": 0.9506172839506173,
+  "confusion_matrix": {
+    "tn": 77,
+    "fp": 4,
+    "fn": 12,
+    "tp": 36
+  },
+  "test_114_label": 0,
+  "ensemble_rule": "mean of 15 checkpoint bag probabilities"
+}

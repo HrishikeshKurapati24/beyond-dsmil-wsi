@@ -20,3 +20,18 @@ output/
 dataset_audits/
 *.pt
 *.DS_Store
+
+# Generated Kaggle outputs and local feature copies. Curated results live in
+# research_results/; notebook outputs remain available in the local archive.
+kaggle_experiments/obtained_results/
+datasets/
+*.npy
+*.npz
+*.pth
+*.ckpt
+*.tif
+*.tiff
+*.svs
+*.part
+__pycache__/
+*.py[cod]
